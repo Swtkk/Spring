@@ -1,45 +1,47 @@
-package com.swietlik.swietlik.rest;
+package com.swietlik.swietlik.controller;
 
 
-import com.swietlik.swietlik.entity.Strimerki;
-import jakarta.annotation.PostConstruct;
-import org.springframework.context.annotation.Bean;
+import com.swietlik.swietlik.model.Streamers;
+import com.swietlik.swietlik.service.StreamersDataBase;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
-@org.springframework.web.bind.annotation.RestController
-@RequestMapping("/api")
-public class RestController {
+@RestController
+@RequestMapping("/streamers")
+public class StreamersController {
 
-    List<Strimerki> strimerki = new ArrayList<>();
-    static Map<Integer,String> DataBase = new HashMap<>();
-    @Bean
-    public static void creatingMockData(){
-        DataBase.put(DataBase.size()+1, "skarpetyki");
-        DataBase.put(DataBase.size()+1, "dupa");
+    private StreamersDataBase theDataBase;
+
+    @Autowired
+    public StreamersController(StreamersDataBase theDataBase){
+        this.theDataBase = theDataBase;
     }
-
-    @GetMapping("/strimerki")
-    public Map<Integer,String> getStrimerki() {
-        return DataBase;
+    @GetMapping()
+    public List<Streamers> findAll() {
+        return theDataBase.findAllStreamers();
     }
 
 
-    @GetMapping("/strimerki/{strimerkaId}")
-    public Strimerki getStrimerka(@PathVariable int strimerkaId) {
-        return strimerki.get(strimerkaId);
+    @GetMapping("/{streamerId}")
+    public Streamers getStreamer(@PathVariable int streamerId) {
+        Streamers streamer = theDataBase.getStreamer(streamerId);
+        return streamer;
     }
-
-//    @PostMapping("/strimerki")
-//    public Strimerki addStrimerka(@RequestBody Strimerki strim) {
-//        Strimerki strimerka = new Strimerki();
-//        strimerka.setId(strim.getId());
-//        strimerka.setUsername(strim.getUsername());
-//        getStrimerki().add(strimerka);
-//        return strimerka;
-//    }
+    @PostMapping()
+    public Streamers addStreamer(@RequestBody Streamers streamer){
+        Streamers tmpStreamer = new Streamers();
+        tmpStreamer.setId(streamer.getId());
+        tmpStreamer.setUsername(streamer.getUsername());
+        theDataBase.saveStreamer(tmpStreamer);
+        return tmpStreamer;
+    }
+    @DeleteMapping("/{streamerId}")
+    public String deleteStreamer(@PathVariable int streamerId){
+        theDataBase.deleteStreamer(streamerId);
+        return "Deleted streamer id - "+ streamerId;
+    }
 }

@@ -1,21 +1,18 @@
-package com.swietlik.swietlik.entity;
+package com.swietlik.swietlik.model;
 
-import com.fasterxml.jackson.annotation.JsonTypeId;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 
 @Getter
 @Setter
-public class Strimerki {
+@NoArgsConstructor
+@AllArgsConstructor
+public class Streamers {
 
     private int id;
     private String username;
-    public Strimerki(){
-    }
 
-    public Strimerki(int id, String username) {
-        this.id = id;
-        this.username = username;
-    }
 }
