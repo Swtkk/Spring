@@ -1,38 +1,73 @@
 package com.swietlik.swietlik.service;
 
-import com.swietlik.swietlik.controller.StreamersController;
-import com.swietlik.swietlik.model.Streamers;
+import com.swietlik.swietlik.model.Streamer;
 import jakarta.annotation.PostConstruct;
-import org.springframework.context.annotation.Bean;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class StreamersDataBase {
-    List<Streamers> DataBaseStreamers;
+    private List<Streamer> dataBaseStreamers;
 
 
     @PostConstruct
     public void loadData() {
-        DataBaseStreamers = new ArrayList<>();
-        DataBaseStreamers.add(new Streamers(1, "Ala"));
-        DataBaseStreamers.add(new Streamers(2, "Masza"));
+        dataBaseStreamers = new ArrayList<>();
+        dataBaseStreamers.add(new Streamer(1, "Ala"));
+        dataBaseStreamers.add(new Streamer(2, "Masza"));
     }
 
-    public Streamers getStreamer(int streamerId) {
-        return DataBaseStreamers.get(streamerId);
+//    public Streamer getStreamer(int streamerId) {
+//        for(Streamer streamer: dataBaseStreamers){
+//            if(streamer.getId() == streamerId){
+//                return streamer;
+//            }
+//
+//
+//        }
+//        return null;
+//    }
+    public Streamer getStreamer(int streamerId) {
+
+            Streamer streamer = null;
+            for (Streamer streamer1 : dataBaseStreamers) {
+                if (streamer1.getId() == streamerId) {
+                    streamer = streamer1;
+                    break;
+                }
+            }
+            if (streamer != null) {
+                return ResponseEntity.ok(streamer).getBody();
+            } else if(streamerId < 0 || streamerId > dataBaseStreamers.size()) {
+                 ResponseEntity.notFound().build();
+                return null;
+           }
+
+            return null;
     }
 
-    public List<Streamers> findAllStreamers() {
-        return DataBaseStreamers;
+    public List<Streamer> findAllStreamers() {
+        return dataBaseStreamers;
     }
 
-    public void saveStreamer(Streamers streamer) {
-        DataBaseStreamers.add(streamer);
+    public void saveStreamer(Streamer streamer) {
+        for(Streamer streamer1: dataBaseStreamers){
+            if(streamer1.getId() == streamer.getId()){
+                streamer1.setUsername(streamer.getUsername());
+
+            }
+        }
     }
-    public void deleteStreamer(int id) {DataBaseStreamers.remove(id);}
+
+    public void deleteStreamer(int id) {
+        dataBaseStreamers.remove(id);
+        ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+    }
 
 }

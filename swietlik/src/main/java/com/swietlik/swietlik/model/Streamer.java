@@ -10,7 +10,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Streamers {
+public class Streamer {
 
     private int id;
     private String username;
