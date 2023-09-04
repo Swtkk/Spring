@@ -33,8 +33,8 @@ public class StreamersController {
 
     @PostMapping()
     public Streamer addStreamer(@RequestBody Streamer streamer) {
-
-        return new Streamer(streamer.getId(), streamer.getUsername());
+        theDataBase.addStr(streamer);
+        return null;
     }
 
     @PutMapping()

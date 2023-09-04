@@ -45,6 +45,22 @@ public class StreamersDataBase {
     public List<Streamer> findAllStreamers() {
         return dataBaseStreamers;
     }
+    boolean found = false;
+    public Streamer addStr(Streamer streamer) {
+        for(Streamer str : dataBaseStreamers){
+            if(str.getId() == streamer.getId()){
+                found = true;
+                break;
+            }
+
+        }
+        if(found){
+            throw new StreamerNotFoundException("Streamer with that id already exist");
+        }else{
+                dataBaseStreamers.add(streamer);
+                return streamer;
+        }
+    }
 
     public void saveStreamer(Streamer streamer) {
         for (Streamer streamer1 : dataBaseStreamers) {

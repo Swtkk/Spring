@@ -12,4 +12,8 @@ public class StreamerNotFoundException extends RuntimeException{
     public StreamerNotFoundException(Throwable cause){
         super(cause);
     }
+
+    public StreamerNotFoundException() {
+
+    }
 }
