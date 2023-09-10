@@ -1,33 +1,37 @@
 package com.swietlik.swietlik.controller;
 
-import com.swietlik.swietlik.model.Streamer;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
-
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.client.HttpClientErrorException;
+import org.springframework.web.server.ResponseStatusException;
 
 @ControllerAdvice
-public class StreamerExceptionHandler {
+public class ApiExceptionHandler{
     @ExceptionHandler
-    public ResponseEntity<StreamerErrorResponse> handleException(StreamerNotFoundException e){
-        StreamerErrorResponse err = new StreamerErrorResponse();
-        err.setStatus(HttpStatus.NOT_FOUND.value());
-        err.setMessage(e.getMessage());
-        err.setTimeStamp(System.currentTimeMillis());
+    public ResponseEntity<ApiErrorResponse> handleException(NotFoundException e) {
+        ApiErrorResponse err = ApiErrorResponse.builder()
+                .status(HttpStatus.NOT_FOUND.value())
+                .message(e.getMessage())
+                .timeStamp(System.currentTimeMillis())
+                .build();
 
         return new ResponseEntity<>(err, HttpStatus.NOT_FOUND);
     }
-    @ExceptionHandler
-    public ResponseEntity<StreamerErrorResponse> handleException(RuntimeException e){
-        StreamerErrorResponse err = new StreamerErrorResponse();
 
-        err.setStatus(HttpStatus.BAD_REQUEST.value());
-        err.setMessage("Failed to convert string to int");
-        err.setTimeStamp(System.currentTimeMillis());
+    @ExceptionHandler(HttpClientErrorException.BadRequest.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    public ResponseEntity<ApiErrorResponse> badRequest(HttpClientErrorException.BadRequest e) {
+        //no idea how to replace RunTimeException to something better
+        ApiErrorResponse err = ApiErrorResponse.builder()
+                .status(HttpStatus.BAD_REQUEST.value())
+                .message(e.getMessage())
+                .timeStamp(System.currentTimeMillis())
+                .build();
 
         return new ResponseEntity<>(err, HttpStatus.BAD_REQUEST);
     }
+
 }

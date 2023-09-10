@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ed8a1959-fa78-4928-917e-9910eed226db" name="Changes" comment="get and post strimerki">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swietlik/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/swietlik/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swietlik/src/main/java/com/swietlik/swietlik/controller/ApiErrorResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/swietlik/src/main/java/com/swietlik/swietlik/controller/ApiErrorResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swietlik/src/main/java/com/swietlik/swietlik/controller/ApiExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/swietlik/src/main/java/com/swietlik/swietlik/controller/ApiExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swietlik/src/main/java/com/swietlik/swietlik/controller/BadRequestException.java" beforeDir="false" afterPath="$PROJECT_DIR$/swietlik/src/main/java/com/swietlik/swietlik/controller/BadRequestException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swietlik/src/main/java/com/swietlik/swietlik/controller/NotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/swietlik/src/main/java/com/swietlik/swietlik/controller/NotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swietlik/src/main/java/com/swietlik/swietlik/controller/StreamersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/swietlik/src/main/java/com/swietlik/swietlik/controller/StreamersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swietlik/src/main/java/com/swietlik/swietlik/service/StreamersDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/swietlik/src/main/java/com/swietlik/swietlik/service/StreamersDataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swietlik/src/test/java/com/swietlik/swietlik/SwietlikApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/swietlik/src/test/java/com/swietlik/swietlik/SwietlikApplicationTests.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2ULZpn3HVMWIhErM7gej0K7S5zH" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/user/Desktop/spring-boot/strimerki",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "project.propCompiler",
+    "spring.configuration.checksum": "aafdfa9240a4887c4f1cc5774824f1ee",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "ChangesTree.GroupingKeys": [
+      "directory",
+      "module"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.swietlik.swietlik.service" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.SwietlikApplication">
+    <configuration name="SwietlikApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="swietlik" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.swietlik.swietlik.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.swietlik.swietlik" />
+      <option name="MAIN_CLASS_NAME" value="com.swietlik.swietlik.SwietlikApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SwietlikApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="swietlik" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.swietlik.swietlik.SwietlikApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.SwietlikApplicationTests" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ed8a1959-fa78-4928-917e-9910eed226db" name="Changes" comment="" />
+      <created>1692721006611</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1692721006611</updated>
+      <workItem from="1692721007770" duration="1169000" />
+      <workItem from="1692722513321" duration="713000" />
+      <workItem from="1692811871133" duration="865000" />
+      <workItem from="1692888639350" duration="6061000" />
+      <workItem from="1692960415824" duration="4418000" />
+      <workItem from="1693134486221" duration="1211000" />
+      <workItem from="1693154029912" duration="2212000" />
+      <workItem from="1693233750408" duration="4814000" />
+      <workItem from="1693320377034" duration="8438000" />
+      <workItem from="1693504801576" duration="338000" />
+      <workItem from="1693505162195" duration="2690000" />
+      <workItem from="1693805085966" duration="4107000" />
+      <workItem from="1693812897698" duration="2658000" />
+      <workItem from="1693938142385" duration="67000" />
+      <workItem from="1694267812733" duration="8455000" />
+      <workItem from="1694345160754" duration="93000" />
+      <workItem from="1694364729889" duration="1580000" />
+    </task>
+    <task id="LOCAL-00001" summary="get and post strimerki">
+      <created>1692722651191</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1692722651191</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="get and post strimerki" />
+    <option name="LAST_COMMIT_MESSAGE" value="get and post strimerki" />
+  </component>
+</project>
