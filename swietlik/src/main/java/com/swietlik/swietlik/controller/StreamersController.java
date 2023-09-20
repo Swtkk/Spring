@@ -4,12 +4,8 @@ package com.swietlik.swietlik.controller;
 import com.swietlik.swietlik.model.Streamer;
 import com.swietlik.swietlik.service.StreamersDataBase;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.client.HttpStatusCodeException;
-import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 
@@ -31,20 +27,19 @@ public class StreamersController {
     @GetMapping("/{streamerId}")
     public Streamer getStreamer(@PathVariable int streamerId) {
 
-        return theDataBase.getStreamer(streamerId);
+        return theDataBase.getStreamerById(streamerId);
     }
 
 
     @PostMapping()
-    public Streamer addStreamer(@RequestBody Streamer streamer) {
+    public void addStreamer(@RequestBody Streamer streamer) throws AlreadyExistException {
         theDataBase.addStr(streamer);
-        return null;
     }
 
 
     @PutMapping()
     public void updateStreamer(@RequestBody Streamer streamer) {
-        theDataBase.saveStreamer(streamer);
+        theDataBase.updateStreamer(streamer);
     }
 
     @DeleteMapping("/{streamerId}")
