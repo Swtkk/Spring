@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed8a1959-fa78-4928-917e-9910eed226db" name="Changes" comment="get and post strimerki">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swietlik/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/swietlik/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swietlik/src/main/java/com/swietlik/swietlik/controller/ApiErrorResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/swietlik/src/main/java/com/swietlik/swietlik/controller/ApiErrorResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swietlik/src/main/java/com/swietlik/swietlik/controller/AlreadyExistException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swietlik/src/test/java/com/swietlik/swietlik/controller/StreamersControllerTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swietlik/src/main/java/com/swietlik/swietlik/controller/ApiExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/swietlik/src/main/java/com/swietlik/swietlik/controller/ApiExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swietlik/src/main/java/com/swietlik/swietlik/controller/BadRequestException.java" beforeDir="false" afterPath="$PROJECT_DIR$/swietlik/src/main/java/com/swietlik/swietlik/controller/BadRequestException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swietlik/src/main/java/com/swietlik/swietlik/controller/BadRequestException.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/swietlik/src/main/java/com/swietlik/swietlik/controller/NotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/swietlik/src/main/java/com/swietlik/swietlik/controller/NotFoundException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swietlik/src/main/java/com/swietlik/swietlik/controller/StreamersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/swietlik/src/main/java/com/swietlik/swietlik/controller/StreamersController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swietlik/src/main/java/com/swietlik/swietlik/service/StreamersDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/swietlik/src/main/java/com/swietlik/swietlik/service/StreamersDataBase.java" afterDir="false" />
@@ -56,33 +55,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/user/Desktop/spring-boot/strimerki",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propCompiler",
-    "spring.configuration.checksum": "aafdfa9240a4887c4f1cc5774824f1ee",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/Desktop/spring-boot/strimerki&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;aafdfa9240a4887c4f1cc5774824f1ee&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "ChangesTree.GroupingKeys": [
-      "directory",
-      "module"
+  &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;,
+      &quot;module&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="com.swietlik.swietlik.service" />
@@ -141,7 +143,11 @@
       <workItem from="1693938142385" duration="67000" />
       <workItem from="1694267812733" duration="8455000" />
       <workItem from="1694345160754" duration="93000" />
-      <workItem from="1694364729889" duration="1580000" />
+      <workItem from="1694364729889" duration="2230000" />
+      <workItem from="1694369506900" duration="1283000" />
+      <workItem from="1694537168391" duration="20000" />
+      <workItem from="1695227530902" duration="1336000" />
+      <workItem from="1695229300938" duration="3050000" />
     </task>
     <task id="LOCAL-00001" summary="get and post strimerki">
       <created>1692722651191</created>

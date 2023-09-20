@@ -24,7 +24,6 @@ public class ApiExceptionHandler{
     @ExceptionHandler(HttpClientErrorException.BadRequest.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     public ResponseEntity<ApiErrorResponse> badRequest(HttpClientErrorException.BadRequest e) {
-        //no idea how to replace RunTimeException to something better
         ApiErrorResponse err = ApiErrorResponse.builder()
                 .status(HttpStatus.BAD_REQUEST.value())
                 .message(e.getMessage())
@@ -33,5 +32,6 @@ public class ApiExceptionHandler{
 
         return new ResponseEntity<>(err, HttpStatus.BAD_REQUEST);
     }
+
 
 }
